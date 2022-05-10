@@ -1,0 +1,20 @@
+<%- include('./partials/head') %>
+
+<main>
+  <section>
+    <div style="display: flex">
+      <h1>Hi..! <%=user.nombre%></h1>
+      <img
+        src="/images/img/<%=user.avatar%> "
+        alt=""
+        style="width: 40px; height: 50px; border-radius: 100px"
+      />
+    </div>
+    <div><%=user.correo%></div>
+    <ul>
+      <li><a href="/logout">Cerrar sesion</a></li>
+    </ul>
+  </section>
+</main>
+
+<%- include('./partials/footer') %>

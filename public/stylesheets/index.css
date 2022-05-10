@@ -1,0 +1,6 @@
+/*hojas de estilos individuales*/
+@import "./listadoPelicula.css";
+
+/*Componentes */
+@import "./components/head.css";
+@import "./components/footer.css";

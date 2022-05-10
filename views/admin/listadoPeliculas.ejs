@@ -1,0 +1,20 @@
+<%- include('../partials/head') %>
+<div class="cont-h1">
+  <h1>LISTADO DE PELICULAS</h1>
+</div>
+<main class="main-padre">
+  <section class="section-padre">
+    <article class="conte-padre-peli">
+      <% for (let i = 0; i < pelicula.length; i++) { %>
+      <div class="cont_img-peli">
+        <a href="/detalles/<%=pelicula[i].id%>"
+          ><center>
+            <img src="/images/IMG_20210211_191601932.jpg" alt="" /></center
+        ></a>
+        <p><%= pelicula[i].title%></p>
+      </div>
+      <% } %>
+    </article>
+  </section>
+</main>
+<%- include('../partials/footer')%>

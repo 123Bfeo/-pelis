@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.cont-h1 h1 {
+  text-align: center;
+}
+.main-padre {
+  display: flex;
+  justify-content: center;
+}
+.main-padre h1 {
+  margin: 30px;
+}
+
+.section-padre {
+  display: flex;
+  width: 90%;
+}
+.conte-padre-peli {
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+}
+.cont_img-peli {
+  width: 150px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.436), 4px 4px 5px rgba(0, 0, 0, 0.436),
+    -2px -2px 7px rgba(0, 0, 0, 0.359), -2px -2px 7px rgba(0, 0, 0, 0.349);
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.cont_img-peli img {
+  width: 80%;
+  margin: 15px;
+}
+.cont_img-peli p {
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  border-top: solid 1px rgba(0, 0, 0, 0.289);
+}

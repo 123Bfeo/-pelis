@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Sitio</title>
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+  </head>
+
+  <body>
+    <header>
+      <p>Mi Sitio Web</p>
+      <div class="head-conte">
+        <nav>
+          <% if (locals.isLogged) { %>
+          <div class="head-conte-padre">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/lista">lista pelis</a></li>
+              <li><a href="/crear">Crear Peli</a></li>
+              <li><a href="/sesion">sesion</a></li>
+            </ul>
+            <div class="date-user">
+              <div class="img-user">
+                <img src="../../images/img/<%=locals.userLogged.avatar%>" />
+              </div>
+              <p>Hi..! <%=locals.userLogged.nombre%></p>
+            </div>
+          </div>
+          <% }else { %>
+          <ul>
+            <li id="login"><a href="/login">login</a></li>
+            <li id="registro"><a href="/registro">registro</a></li>
+          </ul>
+          <% } %>
+        </nav>
+      </div>
+    </header>
+  </body>
+</html>

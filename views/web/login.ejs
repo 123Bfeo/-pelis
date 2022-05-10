@@ -1,0 +1,42 @@
+<%-include('../partials/head')-%>
+<main>
+  <h1>INICIAR SESSION</h1>
+  <form action="/login" method="POST">
+    <label for="correo">
+      <input
+        type="email"
+        name="correo"
+        id="correo"
+        placeholder="Direccion de correo"
+        value="<%= locals.oldData ? oldData.correo: null %>"
+      />
+      <% if(locals.errors && errors.correo) { %>
+      <div>
+        <p style="color: brown"><%=errors.correo.msg%></p>
+      </div>
+      <% } %>
+    </label>
+
+    <label for="pass">
+      <input
+        type="password"
+        name="password"
+        id="pass"
+        placeholder=" Password"
+      />
+      <% if(locals.errors && errors.password) { %>
+      <div>
+        <p style="color: brown"><%=errors.password.msg%></p>
+      </div>
+      <% } %>
+    </label>
+    <label for="recordar"
+      >Recordar credenciales
+      <input type="checkbox" name="recordarme" />
+    </label>
+    <button type="submit">Ingresar</button>
+    <p>registar</p>
+    <form action=""></form>
+  </form>
+</main>
+<%- include('../partials/footer')-%>

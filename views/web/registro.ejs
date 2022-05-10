@@ -1,0 +1,71 @@
+<%-include('../partials/head')-%>
+<main>
+  <h1>INICIAR REGISTRO</h1>
+  <form action="/registro" method="POST" enctype="multipart/form-data">
+    <label for="correo">
+      Direccion de correo
+      <input
+        type="email"
+        name="correo"
+        id="correo"
+        value="<%= locals.oldData ? oldData.correo: null %>"
+      />
+      <% if(locals.errors && errors.correo) { %>
+      <div>
+        <p style="color: brown"><%=errors.correo.msg%></p>
+      </div>
+      <% } %>
+    </label>
+
+    <label for="pass">
+      Password
+      <input type="password" name="password" id="pass" />
+      <% if(locals.errors && errors.password) { %>
+      <div>
+        <p style="color: brown"><%=errors.password.msg%></p>
+      </div>
+      <% } %>
+    </label>
+
+    <label for="nombre">
+      Nombre
+      <input
+        type="text"
+        name="nombre"
+        id="nombre"
+        value="<%= locals.oldData ? oldData.nombre: null %>"
+      />
+      <% if(locals.errors && errors.nombre) { %>
+      <div>
+        <p style="color: brown"><%=errors.nombre.msg%></p>
+      </div>
+      <% } %>
+    </label>
+
+    <label for="apellido">
+      Apellido
+      <input
+        type="text"
+        name="apellido"
+        id="apellido"
+        value="<%= locals.oldData ? oldData.apellido: null %>"
+      />
+      <% if(locals.errors && errors.apellido) { %>
+      <div>
+        <p style="color: brown"><%=errors.apellido.msg%></p>
+      </div>
+      <% } %>
+    </label>
+
+    <label for="imagen">
+      <input type="file" name="avatar" id="imagen" />
+      <% if(locals.errors && errors.avatar) { %>
+      <div>
+        <p style="color: brown"><%=errors.avatar.msg%></p>
+      </div>
+      <% } %>
+    </label>
+    <button type="submit">Registrar</button>
+  </form>
+</main>
+<%- include('../partials/footer')-%>
