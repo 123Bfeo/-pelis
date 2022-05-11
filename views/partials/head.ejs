@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Sitio</title>
     <link rel="stylesheet" href="/stylesheets/index.css" />
+    <script
+      src="https://kit.fontawesome.com/ed2d2bf4c4.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -25,7 +29,10 @@
               <div class="img-user">
                 <img src="../../images/img/<%=locals.userLogged.avatar%>" />
               </div>
-              <p>Hi..! <%=locals.userLogged.nombre%></p>
+              <p>
+                Hi..! <%=locals.userLogged.nombre%>
+                <%=locals.userLogged.apellido%>
+              </p>
             </div>
           </div>
           <% }else { %>

@@ -1,0 +1,59 @@
+.conte-p-formLogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.titulo {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: rgba(0, 0, 0, 0.55);
+}
+.login {
+  padding: 10px;
+  width: 30%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.267), 4px 4px 5px rgba(0, 0, 0, 0.267),
+    -1px -2px 7px rgba(0, 0, 0, 0.267), -1px -2px 7px rgba(0, 0, 0, 0.267);
+}
+.input-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.campo {
+  background-color: rgba(116, 126, 198, 0.608);
+  border: none;
+  border-radius: 5px;
+  width: 25vw;
+  height: 40px;
+  margin-bottom: 20px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.341);
+}
+.campo::placeholder {
+  color: rgba(0, 0, 0, 0.441);
+  padding-left: 5px;
+}
+
+.lab-but {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.but-ingresar {
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100px;
+  height: 30px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.341);
+}
+.but-ingresar:hover {
+  background-color: rgba(116, 126, 198, 0.432);
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.341);
+}
