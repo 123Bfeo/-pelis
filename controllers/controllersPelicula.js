@@ -114,6 +114,8 @@ let pelisControllers = {
   },
 
 
+
+
   crear: (req, res) => {
     db.Genero.findAll().then(function (generos) {
       return res.render("./admin/crearPelicula", { generos: generos });
@@ -130,11 +132,14 @@ let pelisControllers = {
     });
     res.redirect("./lista");
   },
+
   listadoPeliculas: (req, res) => {
     db.Pelicula.findAll().then(function (pelicula) {
       res.render("./admin/listadoPeliculas", { pelicula: pelicula });
     });
   },
+
+
   //para el detalles de la peliculas incluyo las asociaciones entre las tablas
   detalles: (req, res) => {
     db.Pelicula.findByPk(req.params.id, {

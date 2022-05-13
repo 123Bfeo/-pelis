@@ -1,4 +1,5 @@
-module.exports = function (sequelize, dataTypes){
+module.exports = function (sequelize, dataTypes) {
+
   let alias = "Actor";
   let cols = {
     id: {
@@ -13,7 +14,7 @@ module.exports = function (sequelize, dataTypes){
       type: dataTypes.STRING,
     },
   };
-  
+
   let config = {
     tableName: "actors",
     timestamps: false,

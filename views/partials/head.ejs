@@ -25,14 +25,17 @@
               <li><a href="/crear">Crear Peli</a></li>
               <li><a href="/sesion">sesion</a></li>
             </ul>
-            <div class="date-user">
-              <div class="img-user">
-                <img src="../../images/img/<%=locals.userLogged.avatar%>" />
+            <div class="cont-date-user">
+              <div class="date-user">
+                <div class="img-user">
+                  <img src="../../images/img/<%=locals.userLogged.avatar%>" />
+                </div>
+                <p>
+                  Hi..! <%=locals.userLogged.nombre%>
+                  <%=locals.userLogged.apellido%>
+                </p>
               </div>
-              <p>
-                Hi..! <%=locals.userLogged.nombre%>
-                <%=locals.userLogged.apellido%>
-              </p>
+              <a href="/logout">Cerrar sesion</a>
             </div>
           </div>
           <% }else { %>

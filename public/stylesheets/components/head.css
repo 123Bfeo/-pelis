@@ -24,14 +24,18 @@ header p {
   justify-content: space-between;
 }
 /*estilos para Data Users*/
+.cont-date-user {
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .date-user {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
 }
-.date-user {
-  width: 30%;
-  height: 10vh;
-}
+
 .date-user p {
   margin-right: 25px;
   padding-right: 15px;

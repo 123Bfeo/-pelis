@@ -40,6 +40,7 @@ routerPeli.get("/logout", auhtMiddleware, controllers.logout)
 routerPeli.get("/crear", auhtMiddleware, controllers.crear);
 routerPeli.post("/crear", controllers.addPeli);
 
+
 // lectura de las peliculas (R)
 routerPeli.get("/lista", auhtMiddleware, controllers.listadoPeliculas);
 
@@ -55,3 +56,4 @@ routerPeli.post("/editar/:id", controllers.actualizarPeli);
 routerPeli.post("/borrar/:id", controllers.borrarPeli);
 
 module.exports = routerPeli;
+
