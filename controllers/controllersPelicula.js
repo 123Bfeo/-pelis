@@ -12,7 +12,9 @@ const { validationResult } = require('express-validator');
 
 let pelisControllers = {
   home: (req, res) => {
-    res.render("./web/home")
+    db.Pelicula.findAll().then(function (pelicula) {
+      res.render("./web/home", { pelicula: pelicula });
+    });
   },
   // vista para el login 
   login: (req, res) => {
@@ -28,6 +30,7 @@ let pelisControllers = {
         oldData: req.body
       })
     }
+
     let userToLogin = User.userPorEmail(req.body.correo);
     if (userToLogin) {
       let comaparaPass = bcryptjs.compareSync(req.body.password, userToLogin.password);
@@ -36,6 +39,11 @@ let pelisControllers = {
         delete userToLogin.password;
         //Utilizo session para capturar al user que esta loq¿guiandose
         req.session.userLogged = userToLogin;
+
+        if (req.body.record) {
+          res.cookie('userCookie', req.body.correo, { maxAge: 1000 * 3 })
+        }
+
         return res.redirect("sesion");
       }
       return res.render("./web/login", {
@@ -56,13 +64,14 @@ let pelisControllers = {
   },
 
   sesionUser: (req, res) => {
-    res.render("sesion", { user: req.session.userLogged });
+    console.log(req.cookies.userEmail);
+    return res.render("sesion", { user: req.session.userLogged });
   },
 
   //para cerrar la sesion 
   logout: (req, res) => {
     req.session.destroy();
-    return res.redirect("/login")
+    return res.redirect("/")
   },
 
   // vista de registro 
@@ -79,7 +88,7 @@ let pelisControllers = {
         oldData: req.body
       })
     }
-    let userInBD = User.userPorEmail("correo", req.body.correo);
+    let userInBD = User.userPorEmail(req.body.correo);
     if (userInBD) {
       return res.render("./web/registro", {
         errors: {

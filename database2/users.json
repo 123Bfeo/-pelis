@@ -1,10 +1,42 @@
 [
-  {
-    "id": 3,
-    "correo": "nr@gmail.com",
-    "password": "$2a$10$B4LzIXXAuPL6h41A/TOiH.hIiCuX2Hlba3qvyAE76EXG/ZfRZuG5.",
-    "nombre": "jazmin",
-    "apellido": "turber",
-    "avatar": "1651363093951.jpg"
-  }
+ {
+  "id": 3,
+  "correo": "nr@gmail.com",
+  "password": "$2a$10$B4LzIXXAuPL6h41A/TOiH.hIiCuX2Hlba3qvyAE76EXG/ZfRZuG5.",
+  "nombre": "jazmin",
+  "apellido": "turber",
+  "avatar": "1651363093951.jpg"
+ },
+ {
+  "id": 4,
+  "correo": "nr@gmail.com",
+  "password": "$2a$10$JLKcwiYSAuc2GDOt.52BXe/zLMgMXAJmJ5jHlFBjWU4g2P/k4nZhm",
+  "nombre": "luis",
+  "apellido": "nunez",
+  "avatar": "1652292387608.jpg"
+ },
+ {
+  "id": 5,
+  "correo": "nr@gmail.com",
+  "password": "$2a$10$8cvJI2UpW2RfnWfPW/PSC.Fke3oQ86Z8N5DVJ34sPbVPseBnHjwnG",
+  "nombre": "luis",
+  "apellido": "nunez",
+  "avatar": "1652292528581.jpg"
+ },
+ {
+  "id": 6,
+  "correo": "G@gmail.com",
+  "password": "$2a$10$vg40XXDXZAAptvbMeDaxpOcraF1Gc0pbun.ft/KF7Sk08C9y3fnRO",
+  "nombre": "Geraldine",
+  "apellido": "Ariza",
+  "avatar": "1652292668815.jpg"
+ },
+ {
+  "id": 7,
+  "correo": "j@gmail.com",
+  "password": "$2a$10$GRcKd4rLENx5VigWfASE7.jgZVVjwdF6wgXF/R.IL7jr/Yiao8o7i",
+  "nombre": "jose",
+  "apellido": "martinez",
+  "avatar": "1652403652474.jpg"
+ }
 ]

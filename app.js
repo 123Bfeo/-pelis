@@ -1,12 +1,12 @@
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
-var cookieParser = require("cookie-parser");
+var cookies = require("cookie-parser");
 var logger = require("morgan");
 const session = require('express-session')
 const userLoggedMiddleware = require('./middlewares/useLoggedMiddleware');
 
-var indexRouter = require("./routes/index");
+
 var pelisRouter = require("./routes/peliculas.routes");
 
 var app = express();
@@ -24,12 +24,11 @@ app.use(session({
 //requiero el middleware que no permite ver la vista login y 
 //register en caso que el usuario este logeado
 app.use(userLoggedMiddleware);
-
+app.use(cookies());
 //----------------
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", pelisRouter);

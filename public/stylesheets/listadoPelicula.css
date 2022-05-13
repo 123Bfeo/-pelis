@@ -9,6 +9,7 @@
 .main-padre {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 .main-padre h1 {
   margin: 30px;

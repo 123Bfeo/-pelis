@@ -1,7 +1,10 @@
 /*hojas de estilos individuales*/
 @import "./listadoPelicula.css";
 @import "./login.css";
+@import "./registro.css";
+@import "./home.css";
 
 /*Componentes */
+
 @import "./components/head.css";
 @import "./components/footer.css";

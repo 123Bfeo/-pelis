@@ -1,0 +1,30 @@
+.carrrucel-banner {
+  width: 100%;
+}
+.carrrucel-banner img {
+  width: 100%;
+}
+.romance {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.conte-romance {
+  margin: 8px;
+}
+.img-peli {
+  width: 18vw;
+}
+.img-peli img {
+  width: 100%;
+}
+.t-op {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.section-romance {
+  display: flex;
+  justify-content: center;
+}

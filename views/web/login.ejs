@@ -2,14 +2,14 @@
 <main>
   <h1 class="titulo">INICIAR SESSION</h1>
 
-  <form action="/login" method="POST">
-    <section class="conte-p-formLogin">
-      <article class="login">
+  <section class="conte-p-formLogin">
+    <article class="login">
+      <form action="/login" method="POST" class="formLoginIngreso">
         <div class="input-form">
           <label for="correo">
             <input
               class="campo"
-              type="email"
+              type="correo"
               name="correo"
               id="correo"
               placeholder="Example@gmail.com"
@@ -45,12 +45,12 @@
         <div class="lab-but">
           <label for="recordar"
             >Recordar credenciales
-            <input type="checkbox" name="recordarme" />
+            <input type="checkbox" name="record" />
           </label>
           <button class="but-ingresar" type="submit">Ingresar</button>
         </div>
-      </article>
-    </section>
-  </form>
+      </form>
+    </article>
+  </section>
 </main>
 <%- include('../partials/footer')-%>
